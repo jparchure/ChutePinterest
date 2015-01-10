@@ -1,0 +1,112 @@
+.pin { /*Default style for all Pins*/
+	display:inline-block;
+	background: #FEFEFE;
+	border: 2px solid #800000;
+	padding: 2px;
+	padding-bottom: 10px;
+	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+	opacity: .4;
+	border-radius: 9px; 
+	-moz-border-radius: 9px; 
+	}
+
+.darkbox {/*Background for lightbox*/
+
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+
+   }
+
+.lightbox{/*For the displayed image*/
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%%;
+  transform: translate(-50%, -50%);
+  	width: 612px;
+    height: 412px;
+    padding: 5px;
+    border: 2px solid #800000;
+    background-color: white;
+    z-index:1002;
+   
+    overflow: auto;
+}
+@media screen and (max-width: 917px){
+    .lightbox{
+        width: 100%;
+    }
+}
+.lightbox-close {/* Close Button*/
+    position: absolute;
+    left: 95.8%;
+    top: -1%;
+}
+
+
+.caption{/*Caption for images Inside the pin*/
+	text-align:center;
+	width:30%;
+}
+.pin:hover{/*Hover behavior for pin*/
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	opacity: 0.8;
+}
+
+
+.viewMore {/*Button for Infinite Scroll*/
+	-moz-box-shadow:inset 0px -29px 25px -29px #cf866c;
+	-webkit-box-shadow:inset 0px -29px 25px -29px #cf866c;
+	box-shadow:inset 0px -29px 25px -29px #cf866c;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+	background:-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+	background-color:#d0451b;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:2px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:14px;
+	padding:9px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 7px #854629;
+	position: fixed;
+    bottom: 10px;
+    right: 10px; 
+}
+.viewMore:hover {/*On hover*/
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+	background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+	background-color:#bc3315;
+	position: fixed;
+ 	bottom: 10px;
+    right: 10px; 
+}
+.viewMore:active {
+	position: fixed;
+    bottom: 10px;
+    right: 10px; 
+}
+

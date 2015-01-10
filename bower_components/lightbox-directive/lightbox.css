@@ -1,0 +1,38 @@
+.modal {
+    width: 800px;
+    left: 40%;
+}
+ 
+.lightbox-content {
+    width: 100%;
+}
+ 
+.lightbox-image {
+    width: 50%;
+}
+ 
+.lightbox-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+ 
+.lightbox-description {
+    width: 50%;
+}
+ 
+.lightbox-close {
+    position: absolute;
+    left: 95.8%;
+    top: -1%;
+}
+ 
+.lightbox-prev {
+    top: 50%;
+    position: absolute;
+}
+ 
+.lightbox-next {
+    top: 50%;
+    position: absolute;
+    left: 93%;
+}

@@ -1,0 +1,52 @@
+<!-- CREATED BY JAY PARCHURE FOR THE CHUTE PROGRAMMING CHALLENGE -->
+<!DOCTYPE html>
+<html >
+  <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
+        <script src="bower_components/get-style-property/get-style-property.js"></script>
+        <script src="bower_components/get-size/get-size.js"></script>
+        <script src="bower_components/eventEmitter/EventEmitter.js"></script>
+        <script src="bower_components/eventie/eventie.js"></script>
+        <script src="bower_components/doc-ready/doc-ready.js"></script>
+        <script src="bower_components/matches-selector/matches-selector.js"></script>
+        <script src="bower_components/outlayer/item.js"></script>
+        <script src="bower_components/outlayer/outlayer.js"></script>
+        <script src="bower_components/masonry/masonry.js"></script>
+        <script src="bower_components/imagesloaded/imagesloaded.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
+        <script type="text/javascript" src="bower_components/angular-resource.js"></script>
+        <script src="bower_components/angular-masonry/angular-masonry.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+        <script src="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
+        <script type="text/javascript" src="bower_components/angular-chute.js"></script>
+        <script type="text/javascript" src="bower_components/ngDialog/js/ngDialog.min.js"></script>
+        <script type="text/javascript" src="app2.js"></script>
+         <stylesheets></stylesheets>
+   
+  </head>
+  <body ng-app="chuteApp">
+  <div class="gallery" ng-controller="MyGalleryController as GalleryCtrl" >
+  <div masonry="{columnWidth:100,
+  gutter: 5,containerStyle: null, transitionDuration: '1s', hiddenStyle: { transform: 'scale(0.01)'}, visibleStyle: { transform: 'rotate(180deg)'}}">
+   <div ng-controller="MyLightboxController as LightboxCtrl" >
+   <div class="masonry-brick pin caption" ng-repeat="asset in GalleryCtrl.assets">
+
+    <a ng-click="clickToOpen(asset)" >
+     <img ng-src="{{asset.url}}" alt="{{asset.caption}}" width="300" max-width: 100%;>
+    </a>
+
+    <p>{{asset.caption}}</p>
+    </div>
+    </div>
+    <div ng-controller="MyScrollController as ScrollCtrl"> 
+    <button class="viewMore" ng-click="ScrollCtrl.nextPage()">There's More!</button>
+    </div>
+    </div>
+    <a id="bottom"></a>
+    </body>
+</html>
+
